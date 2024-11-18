@@ -17,6 +17,7 @@ const SearchPage = ({ addToCollection }) => {
   });
 
   const navigate = useNavigate();
+  const placeholderImage = 'https://via.placeholder.com/128x192.png?text=No+Cover';
 
   const fetchBooks = useCallback(
     async (query) => {
@@ -136,7 +137,11 @@ const SearchPage = ({ addToCollection }) => {
           {(books.length > 0 ? books : recommendedBooks).map((book, index) => (
             <div className="search-book-card" key={index}>
               <img
-                src={`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`}
+                src={
+                  book.cover_i
+                    ? `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`
+                    : placeholderImage
+                }
                 alt={book.title}
                 className="search-book-img"
               />
