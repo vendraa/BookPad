@@ -19,31 +19,29 @@ const HomePage = ({ addToCollection }) => {
       setIsLoading(true);
       try {
         const response = await fetch(
-          `https://openlibrary.org/search.json?q=subject:Books&limit=50&page=1&${pageNumber}`
+          `https://openlibrary.org/search.json?q=subject:Books&limit=50&page=${pageNumber}`
         );
         const data = await response.json();
-
-        const filteredBooks = data.docs.filter((book) => book.cover_i);
-
-        if (filteredBooks.length > 0) {
-          const formattedBooks = filteredBooks.map((book) => ({
+  
+        if (data.docs.length > 0) {
+          const formattedBooks = data.docs.map((book) => ({
             title: book.title,
             authors: book.author_name,
             coverId: book.cover_i,
             id: book.key,
           }));
-
+  
           setBooks(formattedBooks);
           const updatedCache = {
             ...bookCache,
             [pageNumber]: formattedBooks,
           };
           setBookCache(updatedCache);
-
+  
           localStorage.setItem('bookCache', JSON.stringify(updatedCache));
         } else {
-          setHasMoreBooks(false); 
-          setBooks([]); 
+          setHasMoreBooks(false);
+          setBooks([]);
         }
       } catch (error) {
         console.error('Failed to fetch books:', error);
@@ -52,6 +50,7 @@ const HomePage = ({ addToCollection }) => {
     },
     [bookCache]
   );
+  
 
   useEffect(() => {
     if (bookCache[page]) {
