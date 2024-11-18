@@ -218,5 +218,10 @@ p{
     padding: 10px; 
     overflow: hidden; 
   }
+
+  .success-popup{
+    max-width: 85%;
+    width: 250px;
+  }
 }
 
