@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Poppins';
 }
 
 .App-logo {
@@ -26,6 +27,42 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-icon {
+  font-size: 1.5rem;
+  color: #190157; 
+  transition: color 0.3s ease;
+}
+
+.nav-icon.active {
+  color: #000000; 
+}
+
+.nav-icon:hover {
+  color: #4b0082; 
+}
+
+@media (min-width: 768px) {
+  .bottom-nav {
+    height: 60px;
+    justify-content: space-evenly;
+}
 }
 
 @keyframes App-logo-spin {

@@ -1,0 +1,159 @@
+.collection-page {
+  background-color: #190157;
+  min-height: 100dvh;
+  padding: 20px;
+  color: white;
+  font-family: 'Poppins';
+  box-sizing: border-box;
+}
+
+.collection-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.collection-header h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.collection-book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  padding-bottom: 80px;
+  box-sizing: border-box;
+  justify-items: center;
+  align-items: center;
+  min-height: calc(100vh - 200px); 
+}
+
+.no-books-message {
+  text-align: center;
+  font-family: 'Poppins';
+  font-size: 18px;
+  color: #ccc;
+  margin: auto; 
+}
+
+.collection-page.no-books .collection-book-grid {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column; 
+}
+
+.collection-book-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  font-family: 'Poppins';
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  height: 100%; 
+  box-sizing: border-box;
+}
+
+.collection-book-image {
+  width: 100%;
+  height: 100%;
+  max-height: 550px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.collection-book-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+.collection-book-author {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.collection-detail-button {
+  background-color: #007bff; 
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Poppins';
+  font-weight: bold;
+  margin-bottom: 10px; 
+}
+
+.collection-detail-button:hover {
+  background-color: #0056b3; 
+}
+
+.collection-remove-button {
+  background-color: #ff4c4c;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Poppins';
+  font-weight: bold;
+  margin-top: auto; 
+}
+
+.collection-remove-button:hover {
+  background-color: #ff3333;
+}
+
+@media (max-width: 768px) {
+  .collection-header {
+    font-size: 24px;
+  }
+
+  .collection-book-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+    gap: 10px; 
+  }
+
+  .collection-book-card {
+    padding: 10px; 
+  }
+
+  .collection-book-image {
+    max-height: 450px; 
+  }
+
+  .collection-detail-button, .collection-remove-button {
+    padding: 8px 10px; 
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .collection-header {
+    font-size: 24px;
+  }
+
+  .collection-book-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+    gap: 10px; 
+  }
+
+  .collection-book-card {
+    padding: 10px; 
+  }
+
+  .collection-book-image {
+    max-height: 450px; 
+  }
+
+  .collection-detail-button, .collection-remove-button {
+    padding: 8px 10px; 
+    font-size: 12px;
+  }
+}

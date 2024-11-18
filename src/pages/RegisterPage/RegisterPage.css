@@ -1,0 +1,222 @@
+.register-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  background-color: #190157;
+  color: white;
+  text-align: center; 
+  position: relative;
+  }
+
+.register-logo-container{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  margin-bottom: 0;
+}
+
+.register-logo {
+  width: 96px;
+  height: 96px;
+}
+
+.register-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -25px;
+  margin-bottom: 50px;
+}
+
+.input-field {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 12px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+.input-field .icon {
+  color: black;
+  margin-right: 10px;
+}
+
+.input-field input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 1rem;
+  font-family: 'Poppins';
+}
+  
+h2{
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+  
+p{
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.email-icon::before {
+  content: "✉️";
+  font-size: 1.2rem;
+  align-items: center;
+}
+
+.password-icon::before {
+  content: "🔒";
+  font-size: 1.2rem;
+  align-items: center;
+}
+
+.user-icon::before {
+  content: "👤";
+  font-size: 1.2rem;
+  align-items: center;
+}
+
+.dob-icon::before {
+  content: "📅";
+  font-size: 1.2rem;
+  align-items: center;
+}
+  
+.register-button-container {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+  
+.register-next-button, .register-v2, .register-back-button {
+  width: 90%; 
+  padding: 15px;
+  font-size: 1rem;
+  font-family: 'Poppins';
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  align-items: center;
+  margin-top: 10px;
+}
+  
+.register-next-button, .register-v2 {
+  background-color: #11A716;
+  color: white;
+  border: none;
+}
+  
+.register-back-button {
+  background-color: white;
+  color: black;
+}
+
+.register-next-button:hover{
+  background-color: green;
+}
+
+.register-back-button:hover{
+  background-color: rgb(178, 173, 173);
+}
+
+.register-v2:hover{
+  background-color: green;
+}
+
+#center-calendar .react-datepicker {
+  position: flex;
+  top: 50%;
+  left: 50%;
+  transform: translate(30%, 0%);
+  z-index: 1000; 
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.success-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  color: #11a716;
+  border-radius: 20px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  padding: 40px 50px; 
+  text-align: center;
+  z-index: 1000;
+  width: 300px; 
+  max-width: 90%; 
+}
+
+.success-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; 
+}
+
+.success-icon {
+  font-size: 3rem; 
+}
+
+.success-content p {
+  font-size: 1.5rem; 
+  margin: 0; 
+  font-family: 'Poppins';
+  font-weight: bold;
+}
+
+
+
+@media (max-width: 480px) {
+  .register-logo-container {
+    top: 10px; 
+    left: 10px;
+  }
+
+  .register-logo {
+    width: 80px; 
+    height: 80px;
+  }
+
+  .register-form {
+    width: 90%; 
+    margin: 0 auto; 
+    margin-bottom: 100px; 
+  }
+
+  .input-field {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px; 
+  }
+
+  #center-calendar .react-datepicker {
+    position: fixed; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-40%, -120%); 
+    z-index: 1000; 
+    max-width: 95vw; 
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 10px; 
+    background-color: white; 
+    font-size: 0.9rem; 
+    padding: 10px; 
+    overflow: hidden; 
+  }
+}
+

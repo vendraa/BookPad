@@ -1,0 +1,142 @@
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  background-color: #190157;
+  color: white;
+  text-align: center; 
+  position: relative;
+}
+
+.landing-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: -75px;
+  margin-bottom: 50px;
+}
+
+.landing-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+
+.landing-logo {
+  width: 256px;
+  height: 256px;
+}
+
+.welcome-message {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.description {
+  font-size: 1rem;
+  margin-top: 0;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.register-button, .login-button {
+  width: 90%;
+  padding: 15px;
+  font-size: 1rem;
+  font-family: 'Poppins';
+  font-weight: bold;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.register-button {
+  background-color: white;
+  color: black;
+}
+
+.login-button {
+  background-color: #11A716;
+  color: white;
+}
+.register-button:hover{
+  background-color: rgb(178, 173, 173);
+}
+
+.login-button:hover{
+  background-color: green;
+}
+
+@media (max-width: 768px) {
+  .landing-logo {
+    width: 256px; 
+    height: 256px;
+  }
+
+  .welcome-message {
+    font-size: 2rem; 
+  }
+
+  .description {
+    font-size: 1rem; 
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-logo {
+    width: 256px; 
+    height: 256px;
+  }
+
+  .welcome-message {
+    font-size: 1.9rem; 
+  }
+
+  .description {
+    font-size: 0.9rem; 
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .landing-logo {
+    width: 128px;
+    height: 128px;
+  }
+
+  .welcome-message {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    margin-bottom: 100px; 
+  }
+
+  .button-container {
+    margin-top: 10px;
+  }
+
+  .register-button, .login-button {
+    width: 90%;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    border: none;
+  }
+}

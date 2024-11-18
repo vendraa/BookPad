@@ -1,0 +1,133 @@
+.detail-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #190157;
+  min-height: 100dvh;
+  color: #333;
+}
+
+.detail-back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  font-size: 32px;
+  font-family: 'Poppins';
+  cursor: pointer;
+  color: #333;
+}
+
+.book-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  padding: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-radius: 10px;
+  width: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative; 
+}
+
+.detail-back-button-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+}
+
+.book-cover img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px; 
+}
+
+.book-info {
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+.book-info h2 {
+  text-align: center;
+  font-size: 24px;
+  margin: 10px 0; 
+}
+
+.book-info p {
+  text-align: center;
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.book-description {
+  margin: 5px 0;
+  margin-top: 15px;
+  font-size: 16px;
+  color: #555;
+  text-align: justify; 
+}
+
+.detail-loading-text {
+  font-size: 18px;
+  color: #000000;
+  animation: blink 1.5s infinite; 
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .book-container {
+    padding: 15px;
+    width: 95%;
+  }
+
+  .book-cover img {
+    width: 150px; 
+  }
+
+  .book-info h2 {
+    font-size: 20px;
+  }
+
+  .book-info p, .book-description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 468px) {
+  .book-container {
+    padding: 15px;
+    width: 95%;
+  }
+
+  .book-cover img {
+    width: 150px; 
+  }
+
+  .book-info h2 {
+    font-size: 20px;
+  }
+
+  .book-info p, .book-description {
+    font-size: 14px;
+  }
+}
