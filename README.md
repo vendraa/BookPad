@@ -4,5 +4,6 @@ BookPad merupakan sebuah aplikasi yang berisikan buku - buku tertentu. Aplikasi 
 
 Temukan Dunia Buku Tanpa Batas dan Kelola Daftar Bacaanmu
 
-Develop by;
+Develop by:
+
 Novendra Anugrah
