@@ -134,4 +134,10 @@
     min-height: 100dvh;
     padding-bottom: 5px;
   }
+
+  .profile-item input {
+    font-size: 0.9rem; 
+    padding: 10px;
+    max-width: 100%; 
+  }
 }
